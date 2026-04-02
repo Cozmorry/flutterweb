@@ -1,0 +1,7 @@
+[build]
+  # Netlify doesn't have Flutter pre-installed, so this command clones the Flutter SDK,
+  # sets up the web config, and builds the app all in one go during deployment.
+  command = "git clone https://github.com/flutter/flutter.git -b stable && ./flutter/bin/flutter config --enable-web && ./flutter/bin/flutter build web --release"
+  
+  # This tells Netlify where the compiled files will be output
+  publish = "build/web"
